@@ -45,7 +45,7 @@ function createEmptyThread(title?: string): ChatThread {
 export const useChatStore = create<ChatState>((set) => ({
   threads: [createEmptyThread("Conversation")],
   activeThreadId: null,
-  showAgentPicker: true,
+  showAgentPicker: false,
   setShowAgentPicker: (open: boolean) => set({ showAgentPicker: open }),
   createThread: (title?: string) => {
     const newThread = createEmptyThread(title);

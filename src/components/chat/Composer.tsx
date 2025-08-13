@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Paperclip, Send, Mic } from "lucide-react";
+import { Send, Mic } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useChatStore } from "@/store/chat-store";
@@ -64,43 +64,26 @@ export function Composer({ threadId }: ComposerProps) {
                 )}
               </div>
 
-              {/* Send Button */}
-              <Button
-                onClick={send}
-                disabled={!value.trim()}
-                className="h-12 px-6 bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-700 hover:to-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                aria-label="Send message"
-              >
-                <Send size={18} className="mr-2" />
-                Send
-              </Button>
-            </div>
-
-            {/* Footer with Action Buttons */}
-            <div className="flex items-center justify-between px-2 pt-2 border-t border-slate-200/60 mt-2">
-              <div className="flex items-center gap-3">
-                {/* Attach Button */}
-                <button
-                  className="flex h-10 w-10 items-center justify-center rounded-xl text-slate-600 hover:text-violet-600 hover:bg-gradient-to-br hover:from-violet-500/8 hover:to-blue-500/8 transition-all duration-300 border border-transparent hover:border-violet-500/20"
-                  aria-label="Attach files"
-                >
-                  <Paperclip size={18} />
-                </button>
-
+              {/* Action Buttons */}
+              <div className="flex items-center gap-2">
                 {/* Voice Button */}
                 <button
-                  className="flex h-10 w-10 items-center justify-center rounded-xl text-slate-600 hover:text-blue-600 hover:bg-gradient-to-br hover:from-blue-500/8 hover:to-violet-500/8 transition-all duration-300 border border-transparent hover:border-blue-500/20"
+                  className="flex h-12 w-12 items-center justify-center rounded-xl text-violet-400 hover:text-blue-600 hover:bg-gradient-to-br hover:from-blue-500/8 hover:to-violet-500/8 transition-all duration-300 border border-transparent hover:border-blue-500/20"
                   aria-label="Voice input"
                 >
                   <Mic size={18} />
                 </button>
-              </div>
 
-              <div className="text-xs text-slate-600">
-                <kbd className="px-2 py-1 bg-slate-100 rounded text-xs">
-                  Shift + Enter
-                </kbd>{" "}
-                for new line
+                {/* Send Button */}
+                <Button
+                  onClick={send}
+                  disabled={!value.trim()}
+                  className="h-12 px-6 bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-700 hover:to-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  aria-label="Send message"
+                >
+                  <Send size={18} className="mr-2" />
+                  Send
+                </Button>
               </div>
             </div>
           </div>

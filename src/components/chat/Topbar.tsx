@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { Plus, Sparkles, Bot, Zap } from "lucide-react";
+import { Bot, Zap, Sparkles } from "lucide-react";
 import { useChatStore } from "@/store/chat-store";
 
 export function Topbar() {
@@ -24,7 +24,7 @@ export function Topbar() {
           onClick={() => setShowAgentPicker(true)}
           className="bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-700 hover:to-blue-700 text-white font-semibold shadow-lg"
         >
-          <Plus size={16} className="mr-2" />
+          <Sparkles size={16} className="mr-2" />
           New Chat
         </Button>
       </div>
@@ -53,14 +53,8 @@ export function Topbar() {
           </div>
         </div>
 
-        <div className="relative z-10 flex items-center gap-3"> 
-          <Button
-            onClick={() => setShowAgentPicker(true)}
-            className="bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-700 hover:to-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 px-6"
-          >
-            <Plus size={16} className="mr-2" />
-            Start New Chat
-          </Button>
+        <div className="relative z-10 flex items-center gap-3">
+          {/* Removed Start New Chat button */}
         </div>
       </div>
     </>

@@ -14,7 +14,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         minRows={minRows}
         maxRows={maxRows}
         className={cn(
-          "w-full resize-none rounded-xl border border-border bg-input px-3 py-2 text-sm text-foreground placeholder-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20",
+          "w-full resize-none rounded-xl border-none bg-white px-1 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none transition ",
           className
         )}
         {...props}
@@ -23,5 +23,3 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   }
 );
 Textarea.displayName = "Textarea";
-
-
