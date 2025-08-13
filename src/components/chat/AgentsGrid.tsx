@@ -254,7 +254,7 @@ export function AgentsGrid() {
               placeholder="Search agents by name, description, or capabilities..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="pl-10 w-full bg-white/90 backdrop-blur-sm border-violet-500/20 focus:border-violet-500 shadow-sm"
+              className="pl-10 w-full bg-white/90 backdrop-blur-sm"
             />
           </div>
 

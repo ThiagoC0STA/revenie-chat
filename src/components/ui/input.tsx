@@ -10,7 +10,7 @@ export const Input = React.forwardRef<
       type={type}
       ref={ref}
       className={cn(
-        "h-10 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20",
+        "h-10 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none transition ",
         className
       )}
       {...props}
@@ -18,5 +18,3 @@ export const Input = React.forwardRef<
   );
 });
 Input.displayName = "Input";
-
-
