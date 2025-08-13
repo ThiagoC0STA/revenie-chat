@@ -28,10 +28,10 @@ export function MessageList({ threadId }: MessageListProps) {
         ))
       ) : (
         <div className="mx-auto max-w-3xl text-center pt-20">
-          <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-violet-500/8 to-blue-500/8 rounded-full flex items-center justify-center border border-violet-500/20">
-            <Sparkles className="w-12 h-12 text-violet-600" />
+          <div className="w-24 h-24 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
+            <Sparkles className="w-12 h-12 text-white" />
           </div>
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent mb-4">
+          <h3 className="text-2xl font-bold bg-primary bg-clip-text text-transparent mb-4">
             Start Your AI Journey
           </h3>
           <p className="text-md text-slate-600 max-w-md mx-auto">
@@ -56,13 +56,13 @@ function MessageBubble({ message, index }: { message: ChatMessage; index: number
         <div className={cn(
           "relative mt-2 w-10 h-10 rounded-xl flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 flex-shrink-0",
           isUser 
-            ? "bg-gradient-to-br from-blue-600 to-violet-600 text-white" 
-            : "bg-gradient-to-br from-violet-600 to-blue-600 text-white"
+            ? "bg-primary text-primary-foreground" 
+            : "bg-primary text-primary-foreground"
         )}>
           {isUser ? <User size={20} /> : <Bot size={20} />}
           
           {/* Glow Effect */}
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 rounded-xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
         {/* Message Content */}
@@ -82,8 +82,8 @@ function MessageBubble({ message, index }: { message: ChatMessage; index: number
           <div className={cn(
             "relative rounded-2xl p-4 border-2 transition-all duration-300",
             isUser 
-              ? "bg-gradient-to-r from-blue-500/8 to-violet-500/8 border-blue-500/60" 
-              : "bg-gradient-to-r from-violet-500/8 to-blue-500/8 border-violet-500/60"
+              ? "bg-primary/8 border-primary/60" 
+              : "bg-primary/8 border-primary/60"
           )}>
             {/* Decorative Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-transparent rounded-2xl opacity-60" />
@@ -98,8 +98,8 @@ function MessageBubble({ message, index }: { message: ChatMessage; index: number
             <div className={cn(
               "absolute top-0 right-0 w-4 h-4 rounded-bl-full",
               isUser 
-                ? "bg-gradient-to-br from-blue-600 to-violet-600" 
-                : "bg-gradient-to-br from-violet-600 to-blue-600"
+                ? "bg-primary" 
+                : "bg-primary"
             )} />
           </div>
         </div>

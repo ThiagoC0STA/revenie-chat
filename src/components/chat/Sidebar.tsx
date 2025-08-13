@@ -41,7 +41,7 @@ export function Sidebar() {
         {/* Header */}
         <div className="p-6 border-b border-slate-200/60">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-violet-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div>

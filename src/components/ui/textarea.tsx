@@ -14,7 +14,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         minRows={minRows}
         maxRows={maxRows}
         className={cn(
-          "w-full resize-none rounded-xl border-none bg-white px-1 py-2 text-sm text-slate-900 placeholder:text-slate-500 outline-none transition ",
+          "w-full resize-none rounded-xl border-none bg-input px-1 py-1 text-sm text-foreground placeholder:text-muted-foreground outline-none transition",
           className
         )}
         {...props}

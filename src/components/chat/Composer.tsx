@@ -39,7 +39,7 @@ export function Composer({ threadId }: ComposerProps) {
       <div className="mx-auto w-full p-6">
         <div className="relative rounded-2xl bg-white/90 backdrop-blur-xl border-2 border-violet-500/20 overflow-hidden">
           {/* Decorative Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-violet-500/3 via-transparent to-blue-500/3 opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-blue-500/3 opacity-60" />
 
           <div className="relative px-4 py-2">
             {/* Input Row */}
@@ -51,14 +51,14 @@ export function Composer({ threadId }: ComposerProps) {
                   onChange={(e) => setValue(e.currentTarget.value)}
                   onKeyDown={onKeyDown}
                   placeholder="Type your message here... Ask anything to your AI assistant..."
-                  className="w-full min-h-[48px] max-h-32 bg-transparent border-none focus:ring-0 focus:outline-none resize-none text-base placeholder:text-slate-500/60"
+                  className="w-full min-h-[48px] max-h-32 bg-transparent border-none focus:ring-0 focus:outline-none resize-none text-base placeholder:text-muted-foreground"
                   minRows={1}
                   maxRows={6}
                 />
 
                 {/* Character Count */}
                 {value.length > 0 && (
-                  <div className="absolute bottom-1 right-2 text-xs text-slate-500">
+                  <div className="absolute top-1 right-2 text-xs text-slate-500">
                     {value.length}
                   </div>
                 )}
@@ -78,7 +78,7 @@ export function Composer({ threadId }: ComposerProps) {
                 <Button
                   onClick={send}
                   disabled={!value.trim()}
-                  className="h-12 px-6 bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-700 hover:to-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="h-12 px-6 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label="Send message"
                 >
                   <Send size={18} className="mr-2" />
