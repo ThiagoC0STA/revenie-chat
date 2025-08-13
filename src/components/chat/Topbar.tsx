@@ -56,7 +56,7 @@ export function Topbar() {
         <div className="relative z-10 flex items-center gap-3">
           <Button
             onClick={() => setShowAgentPicker(true)}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300 px-6"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all duration-300 px-6"
           >
             <Plus size={16}/>
             Start New Chat
