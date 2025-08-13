@@ -302,9 +302,9 @@ export function AgentsGrid() {
                 key={category.id}
                 onClick={() => toggleCategory(category.name.toLowerCase())}
                 className={cn(
-                  "px-3 py-1.5 text-sm font-medium rounded-full border transition-all duration-200 flex items-center gap-2",
+                  "px-3 py-1.5 text-sm font-medium rounded-full border transition-all duration-200 flex items-center gap-2 text-slate-600",
                   isSelected
-                    ? `bg-gradient-to-r ${category.color} text-white border-transparent shadow-md`
+                    ? `bg-primary border-transparent shadow-md text-primary-foreground`
                     : "bg-white/80 text-slate-600 border-slate-200 hover:border-violet-300 hover:text-violet-600 hover:bg-violet-50"
                 )}
               >
@@ -366,7 +366,7 @@ export function AgentsGrid() {
               {/* Header with Icon */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br bg-primary to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
                     <Bot className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -399,7 +399,7 @@ export function AgentsGrid() {
               {/* Action Button */}
               <Button
                 onClick={() => start(agent.id, agent.name)}
-                className="w-full bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-700 hover:to-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 h-11"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300 h-11"
               >
                 <Zap className="w-4 h-4 mr-2" />
                 Start Chat
