@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { Bot, Zap, Sparkles, Plus } from "lucide-react";
+import { Bot, Plus } from "lucide-react";
 import { useChatStore } from "@/store/chat-store";
 
 export function Topbar() {
@@ -13,7 +13,7 @@ export function Topbar() {
       <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200/60 bg-white/90 backdrop-blur-xl px-4 py-4 md:hidden">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <Sparkles className="w-4 h-4 text-white" />
+            <Bot className="w-4 h-4 text-white" />
           </div>
           <div>
             <div className="font-bold text-slate-900">Revenie</div>
@@ -35,20 +35,13 @@ export function Topbar() {
         <div className="absolute inset-0 bg-primary/3 opacity-40" />
 
         <div className="relative z-10 flex items-center gap-6">
-          {/* Quick Stats */}
-          <div className="hidden lg:flex items-center gap-4">
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <Bot className="w-4 h-4 text-violet-600" />
-              <span>4 AI Agents</span>
+          {/* Agent Name */}
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-gradient-to-br from-violet-600 to-blue-600 rounded-lg flex items-center justify-center">
+              <Bot className="w-4 h-4 text-white" />
             </div>
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <Zap className="w-4 h-4 text-blue-600" />
-              <span>Real-time Chat</span>
-            </div>
-
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <Sparkles className="w-4 h-4 text-violet-600" />
-              <span>AI-powered responses</span>
+            <div>
+              <div className="font-semibold text-slate-900">AI Assistant</div>
             </div>
           </div>
         </div>
