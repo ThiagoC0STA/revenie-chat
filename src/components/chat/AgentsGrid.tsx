@@ -249,7 +249,7 @@ export function AgentsGrid() {
         {/* Search and Sort Row */}
         <div className="flex flex-col lg:flex-row gap-4 mb-6">
           <div className="flex-1 relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-500" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-500 z-10" />
             <Input
               placeholder="Search agents by name, description, or capabilities..."
               value={query}
